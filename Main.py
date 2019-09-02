@@ -10,3 +10,18 @@ for i in range (6):
     i+=1
 
 print(nouns)
+
+for j in range (7):
+    verbsInputted = input("Enter some verbs: ")
+    verbs.append(verbsInputted)
+    j+=1
+
+print(verbs)
+
+
+for k in range (10):
+    adjInputted = input("Enter some descriptive words: ")
+    adjectives.append(adjInputted)
+    k+=1
+
+print(adjectives)
