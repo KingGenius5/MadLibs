@@ -8,6 +8,31 @@ verbs = []
 adjectives = []
 adverbs = []
 
+#Here's the formatting to make the output look a little cleaner and more presentable
+print(70*"*")
+print(70*"-")
+print(23*" " + "WELCOME TO " + colored('MADLIBS!!!','yellow',attrs=['underline','blink','bold']))
+print(70*"*")
+
+#Little additions that make the UX a bit more enjoyable
+users_name = input("\nBut how rude, I didn't get your name...")
+print("Nice to meet you " + colored(users_name,'blue') + ", shall we begin?")
+print('''\nBelow is the full version of the American National anthem. 
+At the end of this game, that will no longer be the case.\n''')
+
+print(11*" " + colored("The Star-Spangled Banner",attrs=['underline']) + 20*" ")
+print('''============;===========;()
+            # # # #::::::
+            # # # #::::::
+            # # # #::::::
+            # # # #::::::
+            # # # # # # #
+            # # # # # # #
+            # # # # # # #
+            # # # # # # #
+            # # # # # # #
+            # # # # # # #''')
+
 #The original version of The Star Spangled Banner before it gets 'MadLibbed'
 print('''\nO say can you see, by the dawn's early light,
 What so proudly we hail'd at the twiglight's last gleaming,
@@ -42,49 +67,47 @@ And this be our motto - "In God is our trust,"
 And the star-spangled banner in triumph shall wave
 O'ver the land of the free and the home of the brave.\n''')
 
-def noun_func():#will come up with better function names
+def noun_func():
     for i in range (10):
-        nounsInputted = input("Enter some nouns for this MadLibs exercise: ")
+        nounsInputted = input("Enter a(n) noun: ")
         nouns.append(nounsInputted)
         i+=1
-        if(nounsInputted.isalpha() == False):
-            print("Invalid input!!! You want to try entering some real nouns?")
+        if(nounsInputted.isalpha() == False):#from Python documentation, returns true if all characters in the string are alphabetical.
+            #So if we set it to false, we can weed out integers and symbols as invalid input.
+            print("Invalid input!!! You want to try entering some real nouns next time?")
             break
-
 
 def verb_func():
     for j in range (8):
-        verbsInputted = input("Enter some verbs: ")
+        verbsInputted = input("Enter a(n) verb: ")
         verbs.append(verbsInputted)
         j+=1
         if(verbsInputted.isalpha() == False):
-            print("Invalid input!!! You want to try entering some real verbs?")
+            print("Invalid input!!! You want to try entering some real verbs next time?")
             break
-
 
 def adj_func():
     for k in range (8):
-        adjInputted = input("Enter some descriptive words: ")
+        adjInputted = input("Enter a(n) adjective: ")
         adjectives.append(adjInputted)
         k+=1
         if(adjInputted.isalpha() == False):
-            print("Invalid input!!! You want to try entering some real adjectives?")
+            print("Invalid input!!! You want to try entering some real adjectives next time?")
             break
-
 
 def adv_func():
     for l in range (5):
-        adverbsInputted = input("Enter some adverbs: ")
+        adverbsInputted = input("Enter a(n) adverb: ")
         adverbs.append(adverbsInputted)
         l+=1
         if(adverbsInputted.isalpha() == False):
-            print("Invalid input!!! You want to try entering some real adverbs?")
+            print("Invalid input!!! You want to try entering some real adverbs next time?")
             break
 
 noun_func()
+verb_func()
 adj_func()
 adv_func()
-verb_func()
 
 print('''\nO say can you see, by the dawn's early ''' + colored(nouns[0],'red') + ''',
 What so ''' + colored(adverbs[0],'green') + ''' we hail'd at the twiglight's last gleaming,
@@ -118,3 +141,31 @@ Then conquer we must, when out cause is ''' + colored(adjectives[6],'magenta') +
 And this be our motto - "In God is our trust,"
 And the ''' + colored(adjectives[7],'magenta') + ''' banner in triumph shall wave
 O'ver the land of the free and the home of the brave.\n''')
+
+#Site where I got this wonderful artwork from: https://www.oocities.org/spunk1111/flag.htm
+print('''
+     (_)
+    <___>
+     | |______
+     | |* * * )
+     | | * * (_________
+     | |* * * |* *|####)
+     | | * * *| * |   (________________
+     | |* * * |* *|####|##############|
+     | | * * *| * |    |              |
+     | |* * * |* *|####|##############|
+     | |~~~~~~| * |    |              |
+     | |######|* *|####|##############|
+     | |      |~~~'    |              |
+     | |######|########|##############|
+     | |      |        |              |
+     | |######|########|##############|
+     | |~~~~~~|        |              |
+     | |      |########|##############|
+     | |      '~~~~~~~~|              |
+     | |               |##############|
+     | |               '~~~~~~~~~~~~~~~
+     | |
+     | |
+     | |
+     ''')
