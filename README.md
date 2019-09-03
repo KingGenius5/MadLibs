@@ -1,4 +1,4 @@
-A MadLibs take on the American National anthem.
+A MadLibs take on the American National anthem where you enter different parts of speech (nouns, verbs, adverbs, adjectives) and the output becomes wildly different.
 
 The Star Spangled Banner
 
