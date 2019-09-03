@@ -44,6 +44,8 @@ def noun_func():#will come up with better function names
         nounsInputted = input("Enter some nouns for this MadLibs exercise: ")
         nouns.append(nounsInputted)
         i+=1
+        if(nounsInputted.isalpha() == False):
+            print("Invalid input!!! You want to try entering some real nouns?")
 
 
 def verb_func():
@@ -51,6 +53,8 @@ def verb_func():
         verbsInputted = input("Enter some verbs: ")
         verbs.append(verbsInputted)
         j+=1
+        if(verbsInputted.isalpha() == False):
+            print("Invalid input!!! You want to try entering some real verbs?")
 
 
 def adj_func():
@@ -58,6 +62,8 @@ def adj_func():
         adjInputted = input("Enter some descriptive words: ")
         adjectives.append(adjInputted)
         k+=1
+        if(adjInputted.isalpha() == False):
+            print("Invalid input!!! You want to try entering some real adjectives?")
 
 
 def adv_func():
@@ -65,6 +71,8 @@ def adv_func():
         adverbsInputted = input("Enter some adverbs: ")
         adverbs.append(adverbsInputted)
         l+=1
+        if(adverbsInputted.isalpha() == False):
+            print("Invalid input!!! You want to try entering some real adverbs?")
 
 noun_func()
 #adj_func()
