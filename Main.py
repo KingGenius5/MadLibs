@@ -1,8 +1,7 @@
-from random import *#For potential stretch challenge
-
 #color formatting for output in the terminal - just type in 'pip3 install termcolor' and you're set
 from termcolor import colored
 
+#these empty lists will be appended with the user input later on for each part of speech
 nouns = []
 verbs = []
 adjectives = []
@@ -21,17 +20,17 @@ print('''\nBelow is the full version of the American National anthem.
 At the end of this game, that will no longer be the case.\n''')
 
 print(11*" " + colored("The Star-Spangled Banner",attrs=['underline']) + 20*" ")
-print('''============;===========;()
-            # # # #::::::
-            # # # #::::::
-            # # # #::::::
-            # # # #::::::
-            # # # # # # #
-            # # # # # # #
-            # # # # # # #
-            # # # # # # #
-            # # # # # # #
-            # # # # # # #''')
+print('''          ============;===========;()
+                               # # # #::::::
+                               # # # #::::::
+                               # # # #::::::
+                               # # # #::::::
+                               # # # # # # #
+                               # # # # # # #
+                               # # # # # # #
+                               # # # # # # #
+                               # # # # # # #
+                               # # # # # # #''')
 
 #The original version of The Star Spangled Banner before it gets 'MadLibbed'
 print('''\nO say can you see, by the dawn's early light,
@@ -69,7 +68,7 @@ O'ver the land of the free and the home of the brave.\n''')
 
 def noun_func():
     for i in range (10):
-        nounsInputted = input("Enter a(n) noun: ")
+        nounsInputted = input("Enter a(n) nouns: ")
         nouns.append(nounsInputted)
         i+=1
         if(nounsInputted.isalpha() == False):#from Python documentation, returns true if all characters in the string are alphabetical.
@@ -104,11 +103,13 @@ def adv_func():
             print("Invalid input!!! You want to try entering some real adverbs next time?")
             break
 
+#calling functions
 noun_func()
 verb_func()
 adj_func()
 adv_func()
 
+#Display the final story to the user with formatting and color
 print('''\nO say can you see, by the dawn's early ''' + colored(nouns[0],'red') + ''',
 What so ''' + colored(adverbs[0],'green') + ''' we hail'd at the twiglight's last gleaming,
 Whose ''' + colored(adjectives[0],'magenta') + ''' stripes and bright ''' + colored(nouns[1],'red') + ''' through the ''' + colored(adjectives[1],'magenta') + ''' fight
@@ -142,7 +143,7 @@ And this be our motto - "In God is our trust,"
 And the ''' + colored(adjectives[7],'magenta') + ''' banner in triumph shall wave
 O'ver the land of the free and the home of the brave.\n''')
 
-#Site where I got this wonderful artwork from: https://www.oocities.org/spunk1111/flag.htm
+#Site where I got both wonderful flag artwork from: https://www.oocities.org/spunk1111/flag.htm
 print('''
      (_)
     <___>
